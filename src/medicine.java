@@ -136,10 +136,15 @@ ResultSet rs = null;
         jScrollPane1.setViewportView(medicinetable);
 
         exitlable.setFont(new java.awt.Font("Cantarell", 3, 24)); // NOI18N
-        exitlable.setForeground(new java.awt.Color(255, 255, 255));
+        exitlable.setForeground(new java.awt.Color(51, 51, 51));
         exitlable.setText("X ");
+        exitlable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitlableMouseClicked(evt);
+            }
+        });
 
-        clearbutton.setText("clear");
+        clearbutton.setText("CLEAR");
         clearbutton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 clearbuttonMouseClicked(evt);
@@ -192,7 +197,7 @@ ResultSet rs = null;
                     .addGroup(managemedicinepanelLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(managemedicinelabel)
-                        .addGap(220, 220, 220)
+                        .addGap(267, 267, 267)
                         .addComponent(exitlable)))
                 .addContainerGap())
         );
@@ -243,6 +248,7 @@ ResultSet rs = null;
         );
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(127, 138));
 
         billinglabel.setFont(new java.awt.Font("C059", 1, 24)); // NOI18N
         billinglabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -258,14 +264,14 @@ ResultSet rs = null;
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(17, 17, 17)
                 .addComponent(billinglabel)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(102, 102, 102)
+                .addGap(96, 96, 96)
                 .addComponent(billinglabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -282,7 +288,7 @@ ResultSet rs = null;
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(managemedicinepanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 390, Short.MAX_VALUE)
         );
 
         pack();
@@ -384,6 +390,10 @@ ResultSet rs = null;
         new Billing().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_billinglabelMouseClicked
+
+    private void exitlableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitlableMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_exitlableMouseClicked
 
     /**
      * @param args the command line arguments
