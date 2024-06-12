@@ -47,7 +47,7 @@ public void selectmed(){
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        billinglabel = new javax.swing.JLabel();
+        Billingbt = new javax.swing.JButton();
         Billingpanel = new javax.swing.JPanel();
         billinglb = new javax.swing.JLabel();
         idlabel = new javax.swing.JLabel();
@@ -64,9 +64,9 @@ public void selectmed(){
         medicinetable = new javax.swing.JTable();
         managemedicinelabel1 = new javax.swing.JLabel();
         billlb = new javax.swing.JLabel();
-        datelb = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         billtx = new javax.swing.JTextArea();
+        datelb = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -74,12 +74,10 @@ public void selectmed(){
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 0));
 
-        billinglabel.setFont(new java.awt.Font("C059", 1, 24)); // NOI18N
-        billinglabel.setForeground(new java.awt.Color(255, 255, 255));
-        billinglabel.setText("Medicine");
-        billinglabel.addMouseListener(new java.awt.event.MouseAdapter() {
+        Billingbt.setText("MEDICINE");
+        Billingbt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                billinglabelMouseClicked(evt);
+                BillingbtMouseClicked(evt);
             }
         });
 
@@ -89,14 +87,14 @@ public void selectmed(){
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(billinglabel)
+                .addComponent(Billingbt, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addComponent(billinglabel)
+                .addGap(30, 30, 30)
+                .addComponent(Billingbt)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -195,9 +193,6 @@ public void selectmed(){
         billlb.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         billlb.setText("BILL");
 
-        datelb.setFont(new java.awt.Font("Cantarell", 0, 14)); // NOI18N
-        datelb.setText("Date");
-
         billtx.setColumns(20);
         billtx.setFont(new java.awt.Font("FreeMono", 1, 14)); // NOI18N
         billtx.setRows(5);
@@ -237,8 +232,8 @@ public void selectmed(){
                         .addComponent(PRINTbuttion, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BillingpanelLayout.createSequentialGroup()
-                        .addComponent(datelb)
-                        .addGap(65, 65, 65)
+                        .addComponent(datelb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(exitlable)))
                 .addGap(59, 59, 59))
         );
@@ -248,8 +243,8 @@ public void selectmed(){
                 .addContainerGap()
                 .addGroup(BillingpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(exitlable)
-                    .addComponent(datelb))
-                .addGap(24, 24, 24)
+                    .addComponent(datelb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
                 .addGroup(BillingpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(billinglb)
                     .addComponent(managemedicinelabel1))
@@ -303,11 +298,6 @@ public void selectmed(){
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void billinglabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billinglabelMouseClicked
-        new medicine().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_billinglabelMouseClicked
 
     private void idfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idfieldActionPerformed
         // TODO add your handling code here:
@@ -392,6 +382,11 @@ int i =0,price,medi,oldqty,medqty;
          System.exit(0);
     }//GEN-LAST:event_exitlableMouseClicked
 
+    private void BillingbtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BillingbtMouseClicked
+        new medicine().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BillingbtMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -429,14 +424,14 @@ int i =0,price,medi,oldqty,medqty;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ADDTOBILL;
+    private javax.swing.JButton Billingbt;
     private javax.swing.JPanel Billingpanel;
     private javax.swing.JButton PRINTbuttion;
-    private javax.swing.JLabel billinglabel;
     private javax.swing.JLabel billinglb;
     private javax.swing.JLabel billlb;
     private javax.swing.JTextArea billtx;
     private javax.swing.JButton clearbutton;
-    private javax.swing.JLabel datelb;
+    private javax.swing.JFormattedTextField datelb;
     private javax.swing.JLabel exitlable;
     private javax.swing.JTextField idfield;
     private javax.swing.JLabel idlabel;

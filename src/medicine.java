@@ -58,7 +58,7 @@ ResultSet rs = null;
         exitlable = new javax.swing.JLabel();
         clearbutton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        billinglabel = new javax.swing.JLabel();
+        Billingbt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -250,12 +250,10 @@ ResultSet rs = null;
         jPanel1.setBackground(new java.awt.Color(0, 153, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(127, 138));
 
-        billinglabel.setFont(new java.awt.Font("C059", 1, 24)); // NOI18N
-        billinglabel.setForeground(new java.awt.Color(255, 255, 255));
-        billinglabel.setText("Billing");
-        billinglabel.addMouseListener(new java.awt.event.MouseAdapter() {
+        Billingbt.setText("BILLING");
+        Billingbt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                billinglabelMouseClicked(evt);
+                BillingbtMouseClicked(evt);
             }
         });
 
@@ -263,16 +261,16 @@ ResultSet rs = null;
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(billinglabel)
-                .addContainerGap(26, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Billingbt, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(billinglabel)
+                .addGap(26, 26, 26)
+                .addComponent(Billingbt)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -386,14 +384,14 @@ ResultSet rs = null;
         
     }//GEN-LAST:event_clearbuttonMouseClicked
 
-    private void billinglabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_billinglabelMouseClicked
-        new Billing().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_billinglabelMouseClicked
-
     private void exitlableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitlableMouseClicked
         System.exit(0);
     }//GEN-LAST:event_exitlableMouseClicked
+
+    private void BillingbtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BillingbtMouseClicked
+        new Billing().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BillingbtMouseClicked
 
     /**
      * @param args the command line arguments
@@ -432,9 +430,9 @@ ResultSet rs = null;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ADDButton;
+    private javax.swing.JButton Billingbt;
     private javax.swing.JButton DELETEButton;
     private javax.swing.JButton UPDATEButton;
-    private javax.swing.JLabel billinglabel;
     private javax.swing.JButton clearbutton;
     private javax.swing.JLabel exitlable;
     private com.toedter.calendar.JDateChooser expDateChooser;
